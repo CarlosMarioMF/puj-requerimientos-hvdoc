@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: planeación.** Este README es el acuerdo de trabajo inicial. La implementación se realizará por fases para que cada decisión de contenido y tecnología sea revisable.
+**Etapa actual: Fase 0, mapa editorial preparado.** El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes, el recorrido oral, la política de cifras y los pendientes de contenido. La implementación se realizará por fases para que cada decisión de contenido y tecnología sea revisable.
 
 ## Objetivo y límites
 
@@ -29,7 +29,7 @@ El texto explicativo del sitio se redactará a partir del **10.4**. Los anexos a
 
 Docsify cargará páginas Markdown en el navegador sin una compilación del contenido. JavaScript leerá **copias estáticas de CSV** para calcular indicadores y aplicar filtros locales. «Dinámico» significa interacción inmediata en la página; los datos publicados se actualizarán cuando se reemplacen deliberadamente las copias de CSV y se publique una nueva versión. No habrá conexión en vivo con los archivos de OneDrive.
 
-Estructura propuesta, sujeta a ajuste durante la fase 2:
+Estructura propuesta, sujeta a ajuste durante la fase 2. Los nombres técnicos de archivos y carpetas estarán en inglés; su contenido seguirá en español:
 
 ```text
 README.md                 Plan, instalación y mantenimiento
@@ -38,14 +38,14 @@ docs/
   index.html              Entrada y configuración de Docsify
   _sidebar.md             Navegación de la exposición
   README.md               Portada del sitio
-  contenido/              Secciones 1 a 4 del documento 10.4
-  proceso/                Obtención, documentación, priorización,
+  content/                Secciones 1 a 4 del documento 10.4
+  process/                Obtención, documentación, priorización,
                           validación, negociación y gestión
-  datos/                  Copias publicables de CSV y vistas Markdown
+  data/                   Copias publicables de CSV y vistas Markdown
   assets/
     js/                   Carga, filtros e indicadores
     css/                  Estilos y diseño para exposición
-    img/                  Diagramas e imágenes seleccionados
+    images/               Diagramas e imágenes seleccionados
   .nojekyll               Publicación desde /docs en GitHub Pages
 ```
 
