@@ -1,0 +1,2 @@
+- [Inicio](/)
+- [Mapa editorial del proyecto](https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc/blob/main/plan/editorial-map.md)

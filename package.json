@@ -1,0 +1,21 @@
+{
+  "name": "puj-requerimientos-hvdoc",
+  "version": "0.1.0",
+  "description": "Documentación dinámica del proceso de ingeniería de requisitos del Hospital Virtual Universitario",
+  "scripts": {
+    "dev": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc.git"
+  },
+  "private": true,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc/issues"
+  },
+  "homepage": "https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc#readme",
+  "devDependencies": {
+    "docsify-cli": "^5.0.0"
+  }
+}

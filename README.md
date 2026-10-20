@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 0, mapa editorial preparado.** El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes, el recorrido oral, la política de cifras y los pendientes de contenido. La implementación se realizará por fases para que cada decisión de contenido y tecnología sea revisable.
+**Etapa actual: Fase 1, base técnica preparada.** El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes, el recorrido oral, la política de cifras y los pendientes de contenido. La implementación se realizará por fases para que cada decisión de contenido y tecnología sea revisable.
 
 ## Objetivo y límites
 
@@ -33,7 +33,7 @@ Estructura propuesta, sujeta a ajuste durante la fase 2. Los nombres técnicos d
 
 ```text
 README.md                 Plan, instalación y mantenimiento
-package.json              Comandos locales y dependencias de desarrollo
+package.json              Comandos locales y dependencia de Docsify CLI
 docs/
   index.html              Entrada y configuración de Docsify
   _sidebar.md             Navegación de la exposición
@@ -73,11 +73,25 @@ docs/
 1. Abrir PowerShell en la raíz de este repositorio.
 2. Comprobar las herramientas con `node --version`, `npm.cmd --version` y `git --version`.
 3. Si faltara Node.js en otro equipo, instalar su versión LTS desde [Node.js](https://nodejs.org/) y volver a abrir la terminal. Si faltara Git, instalar [Git para Windows](https://git-scm.com/download/win).
-4. Crear `package.json` con un comando `dev` para servir `docs/`. Instalar `docsify-cli` **como dependencia de desarrollo del proyecto** mediante `npm.cmd install`, sin instalación global.
+4. Crear `package.json` mediante `npm.cmd init -y`, instalar `docsify-cli` como dependencia local de desarrollo con `npm.cmd install --save-dev docsify-cli` y añadir un comando `dev` que ejecute `docsify serve docs`.
 5. Crear la entrada mínima de Docsify, la portada, la barra lateral y `.nojekyll` en `docs/`.
 6. Iniciar la vista local con `npm.cmd run dev`; dirección prevista: `http://localhost:3000`.
 
-**Resultado esperado:** sitio local vacío pero navegable, con dependencias declaradas y sin alterar los artefactos fuente.
+**Resultado esperado:** sitio local mínimo y navegable con el servidor oficial de Docsify CLI, sin alterar los artefactos fuente. La primera carga requiere conexión a Internet para obtener Docsify desde el CDN.
+
+### Relación con la guía oficial de Docsify
+
+La [guía de inicio](https://docsify.js.org/#/quickstart) ofrece dos vías: instalar `docsify-cli` para generar archivos y servirlos localmente, o crear manualmente `index.html` con los enlaces CDN a Docsify. Aquí se creó `index.html` manualmente y se usa **Docsify CLI para servirlo localmente**. `npm init -y` creó el manifiesto del proyecto; la instalación del CLI fue un paso separado.
+
+### Uso local
+
+```powershell
+npm.cmd run dev
+```
+
+Abrir `http://localhost:3000`. Detener el servidor con `Ctrl+C`. En una copia nueva del repositorio, ejecutar primero `npm.cmd install` para instalar la dependencia declarada. Si se desea invocar el CLI directamente desde PowerShell, usar `.\node_modules\.bin\docsify.cmd serve docs`; `docsify serve docs` sin ruta requiere instalar el CLI globalmente o añadir `node_modules/.bin` al `PATH`.
+
+La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severidad alta en dependencias de la recarga local (`livereload`/`chokidar`/`braces`). El servidor se usa solo para desarrollo local; GitHub Pages servirá archivos estáticos y no ejecutará ese CLI.
 
 ## Fase 2 — Diseño de información y contenido
 
