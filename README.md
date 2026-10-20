@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 1, base técnica preparada.** El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes, el recorrido oral, la política de cifras y los pendientes de contenido. La implementación se realizará por fases para que cada decisión de contenido y tecnología sea revisable.
+**Etapa actual: Fase 3, datos e interactividad pendientes.** Las fases 0, 1 y 2 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras y enlaces a las fuentes; la exploración de los datos y los gráficos corresponden a la Fase 3.
 
 ## Objetivo y límites
 
@@ -14,16 +14,16 @@ Los artefactos académicos originales **no se modificarán**. El sitio tendrá s
 
 ## Jerarquía de fuentes
 
-| Papel                   | Fuente                                                              | Uso previsto                                                    |
-| ----------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Documento rector        | `10.4 Documento_Agil_Hospital_Virtual_v0.4.docx`                    | Orden, relato y conclusiones de la sustentación.                |
-| Anexo de especificación | `4.3 REQUISITOS_FINALES_DEL_SISTEMA.docx`                           | Redacción completa, atributos y trazabilidad de los requisitos. |
-| Anexo del backlog       | `6.2. HISTORIAS_DE_USUARIO_Y_PRODUCT_BACKLOG.docx`                  | Historias, criterios de aceptación, estimaciones y entregas.    |
-| Datos estructurados     | CSV 7.1 y 7.2                                                       | Filtros, tablas, recuentos y evolución de cambios.              |
-| Evidencia del proceso   | Contexto, entrevista, encuesta, respuestas, storyboards y diagramas | Ejemplos y soporte de las fases.                                |
-| Guía didáctica          | Diapositivas y lecturas del profesor                                | Secuencia y conceptos de ingeniería de requisitos.              |
+| Papel | Fuente | Uso previsto |
+| --- | --- | --- |
+| Documento rector | [Documento Ágil del Hospital Virtual](docs/assets/documents/agile-project-document.docx) | Orden, relato y conclusiones del proyecto. |
+| Especificación | [Especificación de Requisitos](docs/assets/documents/requirements-specification.docx) | Redacción completa, atributos y trazabilidad de los requisitos. |
+| Planificación | [Historias de Usuario y Product Backlog](docs/assets/documents/user-stories-product-backlog.docx) | Historias, criterios de aceptación, estimaciones y entregas. |
+| Datos estructurados | [Registro Maestro de Requisitos](docs/assets/documents/requirements-register.csv) e [Historial de Cambios](docs/assets/documents/requirements-change-log.csv) | Filtros, tablas, recuentos y evolución de cambios. |
+| Evidencia del proceso | Contexto, entrevista, encuesta, respuestas, storyboards y diagramas | Ejemplos y soporte de las fases. |
+| Guía didáctica | Diapositivas y lecturas del profesor | Secuencia y conceptos de ingeniería de requisitos. |
 
-El texto explicativo del sitio se redactará a partir del **10.4**. Los anexos amplían el detalle; los CSV no sustituyen la interpretación académica del documento final. Cada indicador debe mostrar su fuente y explicar qué cuenta. Por ejemplo, **83 requisitos** no son **40 historias de usuario**, y los **354 puntos de historia** no representan dinero ni tiempo.
+El texto explicativo del sitio se redactará a partir del **Documento Ágil**. La Especificación de Requisitos y el Product Backlog amplían el detalle; los datos estructurados no sustituyen la interpretación académica del documento principal. Cada indicador debe mostrar su fuente y explicar qué cuenta. Por ejemplo, **83 requisitos** no son **40 historias de usuario**, y los **354 puntos de historia** no representan dinero ni tiempo.
 
 ## Arquitectura prevista
 
@@ -38,7 +38,7 @@ docs/
   index.html              Entrada y configuración de Docsify
   _sidebar.md             Navegación de la exposición
   README.md               Portada del sitio
-  content/                Secciones 1 a 4 del documento 10.4
+  content/                Visión, épicas, características y evolución
   process/                Obtención, documentación, priorización,
                           validación, negociación y gestión
   data/                   Copias publicables de CSV y vistas Markdown
@@ -51,11 +51,11 @@ docs/
 
 ## Fase 0 — Inventario y mapa editorial
 
-1. Tomar el índice y las secciones del documento 10.4 como mapa inicial.
+1. Tomar el índice y las secciones del Documento Ágil como mapa inicial.
 2. Asociar a cada sección su evidencia: anexo, CSV, diagrama o instrumento.
 3. Registrar qué afirmaciones son **datos medidos**, cuáles son **decisiones documentadas** y cuáles son **síntesis para la exposición**.
-4. Elegir el recorrido oral: contexto → obtención → clasificación/documentación → priorización → validación/negociación → gestión → resultados.
-5. Definir el nivel de detalle que debe verse en una pantalla y el que quedará disponible al profundizar.
+4. Definir la estructura de navegación: contexto, características, proceso de ingeniería, anexos y fuentes.
+5. Diferenciar las síntesis del contenido detallado de los anexos.
 
 **Resultado esperado:** índice del sitio y matriz de correspondencia entre secciones, fuentes y visualizaciones.
 
@@ -95,33 +95,35 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 
 ## Fase 2 — Diseño de información y contenido
 
-1. Redactar la portada con propósito, alcance y ruta sugerida para la sustentación.
-2. Mapear las secciones **1–4 del 10.4** a páginas de visión, épicas, características y evolución.
+**Estado: completada.**
+
+1. Redactar la portada con propósito, alcance y estructura temática.
+2. Mapear las secciones de producto del Documento Ágil a páginas de visión, épicas, características y evolución.
 3. Desglosar la **sección 5** en páginas del proceso: obtención, clasificación/documentación, priorización, validación, negociación y gestión de cambios.
 4. Integrar figuras pertinentes: diagrama de contexto, storyboards, casos de uso y flujo de remisión. Cada figura tendrá título, fuente y explicación de qué demuestra.
-5. Preparar vistas de consulta para los anexos 4.3 y 6.2 sin convertirlos en el relato principal.
+5. Preparar vistas de consulta para la Especificación de Requisitos y el Product Backlog sin convertirlos en el relato principal.
 6. Señalar límites de la evidencia. El PDF de entrevista compartido contiene preguntas, no respuestas; la validación descrita es académica/documental; las siete respuestas de pacientes no representan a toda la población.
 
-**Resultado esperado:** documentación Markdown completa y trazable al 10.4, con un recorrido entendible sin abrir los anexos.
+**Resultado esperado:** documentación Markdown completa y trazable al Documento Ágil, con un recorrido entendible sin abrir los anexos.
 
 ## Fase 3 — Datos, interactividad y visualización
 
-1. Copiar de forma controlada los CSV 7.1 y 7.2 a `docs/data/`, conservando los originales.
+1. Usar las copias publicables del Registro Maestro de Requisitos y del Historial de Cambios en `docs/assets/documents/`, conservando los originales.
 2. Leer el registro maestro en el navegador y ofrecer búsqueda por ID/nombre/texto y filtros por familia, prioridad, entrega, estado y estabilidad.
 3. Leer el historial y ofrecer búsqueda por requisito y filtro por tipo de cambio.
 4. Crear un panel con indicadores y gráficos de clasificación, prioridad, entregas, estabilidad, estados y tipos de cambio. Añadir referencias cruzadas al contenido explicativo.
-5. Mostrar por separado las métricas del backlog tomadas del anexo 6.2: 40 historias, 354 puntos y distribución por entregas. No derivarlas erróneamente del número de filas del registro maestro.
+5. Mostrar por separado las métricas del Product Backlog: 40 historias, 354 puntos y distribución por entregas. No derivarlas del número de filas del Registro Maestro.
 6. Hacer que las vistas sean legibles en proyector y móvil, utilizables con teclado y comprensibles también mediante tablas o etiquetas de texto.
 7. Indicar fecha/versión de la fuente y significado de cada indicador. Evitar publicar información personal de respuestas individuales.
 
 **Resultado esperado:** navegación y visualizaciones interactivas vinculadas a las fuentes correctas.
 
-## Fase 4 — Revisión editorial y preparación de la sustentación
+## Fase 4 — Revisión editorial y presentación
 
-1. Recorrer el sitio en el orden de la exposición y pulir transiciones entre páginas.
-2. Comprobar que cifras, etiquetas y ejemplos coincidan con 10.4, 4.3, 6.2 y CSV; explicar cualquier diferencia entre requisitos e historias.
+1. Revisar la continuidad temática y los enlaces entre páginas.
+2. Comprobar que cifras, etiquetas y ejemplos coincidan con el Documento Ágil, la Especificación de Requisitos, el Product Backlog y los registros; explicar cualquier diferencia entre requisitos e historias.
 3. Revisar que las figuras se lean a distancia y que las vistas con filtros no oculten el contexto metodológico.
-4. Preparar una página de «fuentes y método» y un guion breve de navegación para la presentación.
+4. Consolidar la página de «fuentes y método» y la accesibilidad de la navegación.
 
 **Resultado esperado:** artefacto listo para mostrar a compañeros y profesor, con límites y fuentes visibles.
 
@@ -131,11 +133,3 @@ La opción inicial es **GitHub Pages** porque el repositorio ya está en GitHub 
 
 Pasos previstos: publicar los archivos del sitio en el repositorio, configurar Pages en **Settings → Pages → Deploy from a branch → main → /docs**, abrir la URL publicada y revisar rutas, imágenes y CSV. La publicación del repositorio o la activación de Pages se hará cuando el contenido esté listo para exposición.
 
-## Decisiones por cerrar antes de implementar contenido
-
-- Estilo visual y grado de formalidad de la presentación.
-- Si las copias publicadas incluirán el texto completo de los 83 requisitos y del historial de cambios, o una selección resumida con enlace a anexos.
-- Si se integrarán vistas de las 40 historias individuales o solamente métricas y ejemplos representativos.
-- Qué figuras del trabajo se publicarán en el sitio final.
-
-Estas decisiones no bloquean el inventario ni la preparación técnica, pero sí afectan la profundidad editorial y el contenido público del sitio.

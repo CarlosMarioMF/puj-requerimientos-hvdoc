@@ -6,6 +6,7 @@
     <meta name="description" content="Documentación del proyecto de ingeniería de requisitos del Hospital Virtual Universitario">
     <title>Hospital Virtual Universitario · Ingeniería de requisitos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
   </head>
   <body>
     <div id="app">Cargando documentación…</div>
@@ -14,7 +15,8 @@
         name: 'Hospital Virtual Universitario',
         loadSidebar: true,
         subMaxLevel: 2,
-        auto2top: true
+        auto2top: true,
+        noCompileLinks: ['assets/(documents|files|images)/.*']
       };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@5"></script>

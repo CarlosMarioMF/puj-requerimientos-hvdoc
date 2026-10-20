@@ -1,2 +1,17 @@
 - [Inicio](/)
-- [Mapa editorial del proyecto](https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc/blob/main/plan/editorial-map.md)
+- **Producto y alcance**
+  - [1. Sistema y contexto](/content/system-context)
+  - [2. Épicas y Story Mapping](/content/epics-story-map)
+  - [3. Características y backlog](/content/features-backlog)
+  - [4. Evolución y releases](/content/evolution-releases)
+- **El proceso de ingeniería**
+  - [Obtención](/process/elicitation)
+  - [Clasificación y especificación](/process/specification)
+  - [Priorización](/process/prioritization)
+  - [Validación](/process/validation)
+  - [Negociación](/process/negotiation)
+  - [Gestión de requisitos](/process/management)
+- **Anexos de consulta**
+  - [Especificación de Requisitos](/reference/requirements)
+  - [Product Backlog](/reference/user-stories)
+- [Fuentes y documentos](/sources)

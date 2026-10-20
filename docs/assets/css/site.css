@@ -1,0 +1,10 @@
+.markdown-section { max-width: 1060px; }
+.markdown-section h1 { line-height: 1.2; }
+.markdown-section table { display: block; overflow-x: auto; max-width: 100%; }
+.site-figure { margin: 1.5rem 0; }
+.site-figure img { display: block; width: 100%; height: auto; max-height: 760px; object-fit: contain; border: 1px solid #d8e0e6; border-radius: 8px; }
+.site-figure figcaption { margin-top: .5rem; color: #526577; font-size: .9rem; line-height: 1.5; }
+.site-figure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.site-figure-grid .site-figure { margin: .5rem 0; }
+.site-file-link { padding: .85rem 1rem; background: #f1f7fa; border-left: 4px solid #267ab2; }
+@media (max-width: 700px) { .site-figure-grid { grid-template-columns: 1fr; } }

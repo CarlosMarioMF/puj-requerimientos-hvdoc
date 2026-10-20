@@ -1,0 +1,16 @@
+id_cambio,fecha,requisito_origen,tipo_cambio,requisito_destino,descripcion_motivo,version_origen,version_destino
+CHG-001,2026-09-09,"RFL-C007;RFL-C008",Consolidado,"RFL-C003;RFL-C004;RFL-C005","Retirados como duplicados; sus capacidades quedan detalladas en el flujo de especialidades, disponibilidad y creación de cita.",Pre-consolidación,Sep-2026
+CHG-002,2026-09-09,RFL-P003,Consolidado,"RFL-F002;RFL-F003;RFL-F004","Retirado como duplicado; el pago del paciente o tercero autorizado se especifica en Facturación y Pagos.",Pre-consolidación,Sep-2026
+CHG-003,2026-09-09,"RFL-E002 (anterior)",Reclasificado,"RFL-RE001;RFL-RE002","El contenido correspondía a recursos educativos y no a la gestión del estudiante; se reclasifica al módulo de Recursos Educativos.",Pre-consolidación,Sep-2026
+CHG-004,2026-09-09,"RNF-D001 (anterior)",Consolidado,RNF-R001,"El requisito anterior correspondía a rendimiento y se consolidó en el requisito de rendimiento verificable.",Pre-consolidación,Sep-2026
+CHG-005,2026-09-09,"RNF-D002 (anterior)",Separado,"RFL-P004;RPY-N005","La condición no se mantiene como disponibilidad del software; se separa en información funcional previa a la teleconsulta y protocolo clínico institucional.",Pre-consolidación,Sep-2026
+CHG-006,2026-09-09,"RNF-D003 (anterior)",Separado,"RPY-N006;RFL-M004","La meta clínica se asigna al requisito de negocio sobre niveles de servicio y la medición de tiempos al requisito funcional de remisiones.",Pre-consolidación,Sep-2026
+CHG-007,2026-09-09,RNF-U002,Consolidado,RNF-C001,"Se consolida por corresponder a compatibilidad entre dispositivos, sistemas operativos y navegadores.",Pre-consolidación,Sep-2026
+CHG-008,2026-09-09,RNF-U003,Retirado,RNF-D001,"Se retira por duplicar la disponibilidad definida en el requisito vigente de disponibilidad.",Pre-consolidación,Sep-2026
+CHG-009,2026-09-09,RNF-F001,Consolidado,"RNF-S002;RNF-S007","Se consolida en requisitos de privacidad y control de acceso.",Pre-consolidación,Sep-2026
+CHG-010,2026-09-09,RNF-F002,Separado,"RFL-P004;RPY-N005","Se separa en información funcional para el paciente y protocolo clínico de atención virtual.",Pre-consolidación,Sep-2026
+CHG-011,2026-09-09,RNF-E002,Consolidado,RNF-E001,"No se mantiene como requisito independiente; el crecimiento de procesamiento y almacenamiento queda incluido en escalabilidad.",Pre-consolidación,Sep-2026
+CHG-012,2026-09-09,RPY-P001,Retirado,,"Candidato no incorporado a la línea base de septiembre porque ninguna fuente definía monto, alcance presupuestal aprobado o condición equivalente.",Pre-consolidación,Sep-2026
+CHG-013,2026-09-09,RPY-T001,Retirado,,"Candidato no incorporado a la línea base de septiembre porque ninguna fuente definía fecha, hito o plazo contractual aprobado.",Pre-consolidación,Sep-2026
+CHG-014,2026-10-12,,Creado,RPY-P001,"Se incorpora a la línea base vigente después de la validación con el líder del proyecto PM/PO: referencia presupuestal de COP 400 millones para levantamiento de requisitos y prototipo MVP.",Sep-2026,LB-1.0
+CHG-015,2026-10-12,,Creado,RPY-T001,"Se incorpora a la línea base vigente después de la validación con el líder del proyecto PM/PO: tiempo máximo de 24 meses para terminar la ejecución del proyecto.",Sep-2026,LB-1.0
