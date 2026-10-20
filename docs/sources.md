@@ -18,6 +18,8 @@ Las páginas sintetizan los documentos académicos y conservan sus referencias. 
 
 Los archivos **PDF** pueden abrirse en el navegador; los **DOCX y CSV** se ofrecen para descarga. Las respuestas individuales del cuestionario no se publican: se presentan solo agregados.
 
+Las copias CSV alimentan el [panel de resultados](/data/dashboard), el [explorador de requisitos](/data/requirements) y el [explorador de cambios](/data/changes). Los valores de historias y Story Points se toman del anexo de planificación, no del recuento de filas del registro.
+
 ## Límites de interpretación
 
 - **83 requisitos** proceden de la línea base y del <a href="assets/documents/requirements-register.csv" download>Registro Maestro</a>: 53 RFL, 22 RNF y 8 RPY.

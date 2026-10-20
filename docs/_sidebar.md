@@ -14,4 +14,8 @@
 - **Anexos de consulta**
   - [Especificación de Requisitos](/reference/requirements)
   - [Product Backlog](/reference/user-stories)
+- **Datos y visualización**
+  - [Panel de resultados](/data/dashboard)
+  - [Explorador de requisitos](/data/requirements)
+  - [Explorador de cambios](/data/changes)
 - [Fuentes y documentos](/sources)

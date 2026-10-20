@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 3, datos e interactividad pendientes.** Las fases 0, 1 y 2 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras y enlaces a las fuentes; la exploración de los datos y los gráficos corresponden a la Fase 3.
+**Etapa actual: Fase 3, implementación de datos e interactividad.** Las fases 0, 1 y 2 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
 
 ## Objetivo y límites
 
@@ -115,6 +115,8 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 5. Mostrar por separado las métricas del Product Backlog: 40 historias, 354 puntos y distribución por entregas. No derivarlas del número de filas del Registro Maestro.
 6. Hacer que las vistas sean legibles en proyector y móvil, utilizables con teclado y comprensibles también mediante tablas o etiquetas de texto.
 7. Indicar fecha/versión de la fuente y significado de cada indicador. Evitar publicar información personal de respuestas individuales.
+
+**Implementación actual:** [panel de resultados](docs/data/dashboard.md), [explorador de requisitos](docs/data/requirements.md) y [explorador de cambios](docs/data/changes.md). Las barras y los filtros se construyen en el navegador a partir de las copias CSV. La distribución de historias y puntos se presenta aparte, con el Product Backlog como fuente.
 
 **Resultado esperado:** navegación y visualizaciones interactivas vinculadas a las fuentes correctas.
 

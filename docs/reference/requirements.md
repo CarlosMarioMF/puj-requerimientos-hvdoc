@@ -12,6 +12,8 @@ La <a href="assets/documents/requirements-specification.docx" download>Especific
 
 Cada requisito tiene un ID estable, nombre, descripción, clasificación, versión, fecha, fuente, responsable, estabilidad, prioridad, estado, release y trazabilidad. El <a href="assets/documents/requirements-register.csv" download>Registro Maestro de Requisitos</a> reproduce estos atributos en formato tabular.
 
+El [explorador de requisitos](/data/requirements) permite buscar los registros vigentes y filtrar por familia, prioridad, entrega, estado y estabilidad. El [panel de resultados](/data/dashboard) resume sus distribuciones.
+
 ## Relaciones de trazabilidad
 
 El atributo *fuente* relaciona cada requisito con su evidencia de [obtención](/process/elicitation). La *trazabilidad* conecta los RFL con las [historias de usuario](/reference/user-stories) y el [Story Mapping](/content/epics-story-map). El <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> registra las decisiones de [gestión de cambios](/process/management).

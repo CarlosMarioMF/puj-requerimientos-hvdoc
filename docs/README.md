@@ -14,6 +14,8 @@ El producto propuesto coordina atención virtual, actividad clínica, formación
 - [Épicas, características y evolución](/content/epics-story-map): organización del producto, backlog y entregas.
 - [Proceso de ingeniería](/process/elicitation): obtención, especificación, priorización, validación, negociación y gestión.
 - [Anexos de referencia](/reference/requirements): estructura de los requisitos y las historias de usuario.
+- [Panel de resultados](/data/dashboard): indicadores y gráficos por unidad de análisis.
+- [Explorador de requisitos](/data/requirements) y [explorador de cambios](/data/changes): búsqueda y filtros sobre los CSV.
 
 ## Cómo leer las cifras
 

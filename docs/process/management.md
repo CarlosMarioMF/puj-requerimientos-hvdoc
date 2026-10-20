@@ -6,6 +6,8 @@
 
 El proyecto gestiona, por una parte, cada requisito e historia; por otra, las versiones de los documentos y la línea base. El <a href="assets/documents/requirements-register.csv" download>Registro Maestro</a> conserva el **estado vigente** de 83 requisitos. El <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> conserva **15 decisiones de cambio**. Son fuentes complementarias, no dos listas independientes de requisitos actuales.
 
+El [explorador de requisitos](/data/requirements) muestra el estado vigente. El [explorador de cambios](/data/changes) permite buscar las decisiones históricas por identificador y tipo de cambio; el [panel de resultados](/data/dashboard) compara las distribuciones sin mezclar sus unidades.
+
 ## Atributos de gestión
 
 Cada fila vigente contiene 13 atributos: ID, nombre, descripción, clasificación, versión, fecha, fuente, responsable, estabilidad, prioridad, estado, release y trazabilidad. La estabilidad distingue *Fijo*, *Establecido* y *Volátil*. Para RFL, la prioridad puede ser MUST, SHOULD o COULD; los RNF y RPY pueden figurar como N/A por no haber recibido esa clasificación MoSCoW individual.
