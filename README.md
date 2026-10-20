@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 3, implementación de datos e interactividad.** Las fases 0, 1 y 2 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
+**Etapa actual: Fase 4, revisión editorial y presentación.** Las fases 0, 1, 2 y 3 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
 
 ## Objetivo y límites
 
@@ -107,6 +107,8 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 **Resultado esperado:** documentación Markdown completa y trazable al Documento Ágil, con un recorrido entendible sin abrir los anexos.
 
 ## Fase 3 — Datos, interactividad y visualización
+
+**Estado: completada.** La revisión final de presentación, continuidad y accesibilidad corresponde a la Fase 4.
 
 1. Usar las copias publicables del Registro Maestro de Requisitos y del Historial de Cambios en `docs/assets/documents/`, conservando los originales.
 2. Leer el registro maestro en el navegador y ofrecer búsqueda por ID/nombre/texto y filtros por familia, prioridad, entrega, estado y estabilidad.
