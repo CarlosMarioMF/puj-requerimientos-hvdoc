@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 5, despliegue gratuito.** Las fases 0 a 4 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
+**Etapa actual: Fase 5, preparación de GitHub Pages.** Las fases 0 a 4 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
 
 ## Objetivo y límites
 
@@ -136,7 +136,15 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 
 ## Fase 5 — Despliegue gratuito
 
-La opción inicial es **GitHub Pages** porque el repositorio ya está en GitHub y Docsify puede publicarse directamente desde `main` → `/docs`, sin compilar el sitio. La [guía oficial de Docsify](https://github.com/docsifyjs/docsify/blob/develop/docs/deploy.md) recomienda esa ubicación; se incluirá `.nojekyll` para que GitHub Pages sirva `_sidebar.md`.
+**Estado: preparado localmente; publicación y comprobación de la URL pendientes.** El sitio Docsify está en `docs/`, y `docs/.nojekyll` ya está versionado para que GitHub Pages sirva archivos como `_sidebar.md` sin procesarlos con Jekyll. Docsify y su tema usan la versión 5.0.0 desde el CDN. El sitio requiere conexión a Internet para cargar esos dos recursos.
 
-Pasos previstos: publicar los archivos del sitio en el repositorio, configurar Pages en **Settings → Pages → Deploy from a branch → main → /docs**, abrir la URL publicada y revisar rutas, imágenes y CSV. La publicación del repositorio o la activación de Pages se hará cuando el contenido esté listo para exposición.
+La [documentación oficial de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) permite publicar directamente desde una rama y la carpeta `/docs`. Para activar este repositorio:
+
+1. Confirmar que los cambios de esta fase estén en `main` y publicados en `origin/main`.
+2. Abrir [Settings → Pages](https://github.com/CarlosMarioMF/puj-requerimientos-hvdoc/settings/pages).
+3. En **Build and deployment**, seleccionar **Deploy from a branch**. Elegir **main** y **/docs**; pulsar **Save**.
+4. Esperar el despliegue y abrir `https://carlosmariomf.github.io/puj-requerimientos-hvdoc/`.
+5. Comprobar portada, barra lateral, figuras, documentos descargables, panel y exploradores; confirmar que las vistas leen ambos CSV bajo la ruta del proyecto.
+
+Una vista local con la ruta `/puj-requerimientos-hvdoc/` ya confirmó la carga del explorador de requisitos y del CSV. La URL pública y la configuración de Pages aún deben verificarse después de la publicación. GitHub Pages publica los archivos de `docs/` en la web, incluidos los anexos y CSV enlazados; las respuestas individuales de pacientes no están en esa carpeta.
 
