@@ -26,8 +26,8 @@ Entre **siete respuestas**, seis marcaron consulta de resultados de exámenes y 
 La paciente del primer storyboard inicia sesión, busca especialidad y horario, confirma la cita y considera añadirla a Google Calendar. El profesional del segundo revisa su agenda, filtra la semana, consulta el detalle clínico permitido y prepara un reporte. Estos escenarios permitieron hablar de flujos y dificultades concretas, no solo de nombres de módulos.
 
 <div class="site-figure-grid">
-  <figure class="site-figure"><a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer"><img src="assets/images/patient-storyboard.png" alt="Secuencia ilustrada de una paciente que reserva una cita"></a><figcaption>Storyboard de reserva de cita.</figcaption></figure>
-  <figure class="site-figure"><a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer"><img src="assets/images/clinician-storyboard.jpeg" alt="Secuencia ilustrada de un profesional que prepara su agenda"></a><figcaption>Storyboard de agenda profesional.</figcaption></figure>
+  <figure class="site-figure"><a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer"><img src="assets/images/patient-storyboard.png" alt="Secuencia ilustrada de una paciente que reserva una cita"></a><figcaption>Storyboard de reserva de cita. <a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer">Abrir imagen en tamaño completo</a>.</figcaption></figure>
+  <figure class="site-figure"><a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer"><img src="assets/images/clinician-storyboard.jpeg" alt="Secuencia ilustrada de un profesional que prepara su agenda"></a><figcaption>Storyboard de agenda profesional. <a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer">Abrir imagen en tamaño completo</a>.</figcaption></figure>
 </div>
 
 ## Salida hacia la especificación

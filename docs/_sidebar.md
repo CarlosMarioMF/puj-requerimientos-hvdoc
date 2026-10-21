@@ -18,4 +18,4 @@
   - [Panel de resultados](/data/dashboard)
   - [Explorador de requisitos](/data/requirements)
   - [Explorador de cambios](/data/changes)
-- [Fuentes y documentos](/sources)
+- [Fuentes y método](/sources)

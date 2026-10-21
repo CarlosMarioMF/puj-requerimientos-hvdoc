@@ -27,4 +27,4 @@ El producto propuesto coordina atención virtual, actividad clínica, formación
 | Estimación total | 354 puntos de historia | <a href="assets/documents/user-stories-product-backlog.docx" download>Product Backlog</a>. |
 | Eventos de cambio | 15 | <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a>. |
 
-Estas son **unidades distintas**: una historia puede relacionarse con varios requisitos, y un requisito puede descomponerse en varias historias. Los puntos de historia expresan esfuerzo relativo, no horas ni dinero. La [página de fuentes y documentos](/sources) reúne los archivos y precisa la interpretación de la evidencia.
+Estas son **unidades distintas**: una historia puede relacionarse con varios requisitos, y un requisito puede descomponerse en varias historias. Los puntos de historia expresan esfuerzo relativo, no horas ni dinero. La [página de fuentes y método](/sources) reúne los archivos y precisa la interpretación de la evidencia.

@@ -35,7 +35,7 @@ Las integraciones previstas incluyen EHR/ECE, videoconferencia, correo, facturac
 
 <figure class="site-figure">
   <a href="assets/images/context-diagram.png" target="_blank" rel="noopener noreferrer"><img src="assets/images/context-diagram.png" alt="Diagrama de contexto con actores, sistemas externos y zonas grises alrededor del sistema de apoyo"></a>
-  <figcaption>Diagrama de Contexto del Sistema. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> precisa la frontera y las integraciones.</figcaption>
+  <figcaption>Diagrama de Contexto del Sistema. <a href="assets/images/context-diagram.png" target="_blank" rel="noopener noreferrer">Abrir imagen en tamaño completo</a>. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> precisa la frontera y las integraciones.</figcaption>
 </figure>
 
 ## Restricciones documentadas
@@ -43,7 +43,7 @@ Las integraciones previstas incluyen EHR/ECE, videoconferencia, correo, facturac
 - Aplicación de controles por rol y mínimo privilegio, auditoría y autenticación multifactor para profesionales y personal administrativo.
 - Protección de los datos personales y clínicos durante transmisión y almacenamiento.
 - Dependencia de las interfaces y disponibilidad de los sistemas externos.
-- Referencia presupuestal de **400 millones COP para el levantamiento inicial y el prototipo MVP**; el documento no la presenta como presupuesto total de implementación. Horizonte máximo de **24 meses** para la ejecución desde la definición final de requisitos.
+- Referencia presupuestal de **400 millones COP para el levantamiento inicial y el prototipo MVP**; el documento no la presenta como presupuesto total de implementación. Horizonte máximo de **24 meses** para la ejecución, contado desde el inicio de la definición final de los requisitos.
 - Consideración de normativa colombiana sobre telesalud, datos personales y ética médica, según el <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a>.
 
 La vigencia jurídica de esas normas no es objeto de esta documentación. El propósito de esta página es explicar las restricciones registradas durante el proyecto académico.

@@ -4,7 +4,7 @@ Repositorio para preparar una **sustentación interactiva** del proceso de ingen
 
 ## Estado del proyecto
 
-**Etapa actual: Fase 4, revisión editorial y presentación.** Las fases 0, 1, 2 y 3 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
+**Etapa actual: Fase 5, despliegue gratuito.** Las fases 0 a 4 están completas. El [inventario y mapa editorial](plan/editorial-map.md) desarrolla el índice, la matriz de fuentes y las reglas de interpretación de cifras. El sitio incluye el recorrido Markdown, figuras, enlaces a las fuentes y vistas interactivas sobre los CSV.
 
 ## Objetivo y límites
 
@@ -108,7 +108,7 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 
 ## Fase 3 — Datos, interactividad y visualización
 
-**Estado: completada.** La revisión final de presentación, continuidad y accesibilidad corresponde a la Fase 4.
+**Estado: completada.** La presentación, continuidad y accesibilidad se revisaron en la Fase 4.
 
 1. Usar las copias publicables del Registro Maestro de Requisitos y del Historial de Cambios en `docs/assets/documents/`, conservando los originales.
 2. Leer el registro maestro en el navegador y ofrecer búsqueda por ID/nombre/texto y filtros por familia, prioridad, entrega, estado y estabilidad.
@@ -124,10 +124,13 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 
 ## Fase 4 — Revisión editorial y presentación
 
+**Estado: completada.** Se contrastaron las cifras principales con el Documento Ágil y los CSV, se revisaron las rutas locales, se amplió la presentación de figuras y tablas, y se comprobó la lectura de las vistas de datos en escritorio y móvil. Los controles de búsqueda, filtrado, reinicio y paginación funcionan con teclado y conservan sus etiquetas y recuentos visibles.
+
 1. Revisar la continuidad temática y los enlaces entre páginas.
 2. Comprobar que cifras, etiquetas y ejemplos coincidan con el Documento Ágil, la Especificación de Requisitos, el Product Backlog y los registros; explicar cualquier diferencia entre requisitos e historias.
 3. Revisar que las figuras se lean a distancia y que las vistas con filtros no oculten el contexto metodológico.
 4. Consolidar la página de «fuentes y método» y la accesibilidad de la navegación.
+
 
 **Resultado esperado:** artefacto listo para mostrar a compañeros y profesor, con límites y fuentes visibles.
 

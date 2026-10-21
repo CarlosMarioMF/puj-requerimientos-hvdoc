@@ -173,12 +173,17 @@
     return button;
   }
 
-  function table(headers, rows, renderRow) {
+  function table(headers, rows, renderRow, caption) {
     const wrap = element('div', 'data-table-wrap');
     const node = element('table', 'data-table');
+    if (caption) node.append(element('caption', 'data-table-caption', caption));
     const thead = element('thead');
     const head = element('tr');
-    headers.forEach(label => head.append(element('th', '', label)));
+    headers.forEach(label => {
+      const column = element('th', '', label);
+      column.scope = 'col';
+      head.append(column);
+    });
     thead.append(head);
     const body = element('tbody');
     rows.forEach(row => body.append(renderRow(row)));
@@ -194,11 +199,11 @@
     const previous = element('button', '', 'Anterior');
     previous.type = 'button';
     previous.disabled = page === 1;
-    previous.addEventListener('click', () => onPage(page - 1));
+    previous.addEventListener('click', () => onPage(page - 1, 'previous'));
     const next = element('button', '', 'Siguiente');
     next.type = 'button';
     next.disabled = page === totalPages;
-    next.addEventListener('click', () => onPage(page + 1));
+    next.addEventListener('click', () => onPage(page + 1, 'next'));
     nav.append(previous, element('span', '', 'Página ' + page + ' de ' + totalPages), next);
     parent.append(nav);
   }
@@ -211,12 +216,15 @@
       const controls = element('div', 'data-controls');
       const filter = selectControl('Familia de requisitos', [['', 'Todas las familias'], ['RFL', 'RFL · funcionales'], ['RNF', 'RNF · no funcionales'], ['RPY', 'RPY · proyecto']], render);
       controls.append(filter.wrap);
+      const filterSummary = element('p', 'data-results');
+      filterSummary.setAttribute('role', 'status');
       const metrics = element('div', 'data-metrics');
       const charts = element('div', 'data-chart-grid');
-      root.append(controls, metrics, charts);
+      root.append(controls, filterSummary, metrics, charts);
 
       function render() {
         const subset = filter.control.value ? requirements.filter(row => family(row) === filter.control.value) : requirements;
+        filterSummary.textContent = filter.control.value ? subset.length + ' requisitos de la familia ' + filter.control.value + '. Las cifras de historias y cambios conservan sus totales independientes.' : requirements.length + ' requisitos vigentes. Todas las familias.';
         clear(metrics);
         metrics.append(
           metric('Requisitos vigentes', subset.length, filter.control.value ? 'Familia ' + filter.control.value + ' · Registro Maestro' : 'Línea base · Registro Maestro'),
@@ -243,7 +251,7 @@
         ['Release 2 · SHOULD', '14', '126'],
         ['Release 3 · COULD', '4', '39'],
         ['Total', '40', '354']
-      ], values => { const row = element('tr'); values.forEach(value => cell(row, value)); return row; }));
+      ], values => { const row = element('tr'); values.forEach(value => cell(row, value)); return row; }, 'Historias y puntos de historia por entrega'));
       sourceNote(backlog, 'Fuente: versión documental 1.1.', new URL('user-stories-product-backlog.docx', base), 'Descargar Product Backlog');
       root.append(backlog);
       sourceNote(root, 'Requisitos: versión 1.0, 12/10/2026.', files.requirements, 'Descargar Registro Maestro');
@@ -293,7 +301,8 @@
         if (!subset.length) { results.append(element('p', 'data-empty', 'No hay requisitos que coincidan con los filtros.')); return; }
         results.append(table(['ID y nombre', 'Clasificación', 'Prioridad / entrega', 'Estado / estabilidad', 'Descripción y trazabilidad'], subset.slice((page - 1) * pageSize, page * pageSize), row => {
           const tr = element('tr');
-          const identity = element('td');
+          const identity = element('th');
+          identity.scope = 'row';
           identity.append(element('strong', '', row.id), document.createElement('br'), document.createTextNode(row.nombre));
           tr.append(identity);
           cell(tr, row.clasificacion);
@@ -303,8 +312,14 @@
           detail.append(element('p', '', row.descripcion), element('small', '', 'Trazabilidad: ' + (row.trazabilidad || 'Sin dato')));
           tr.append(detail);
           return tr;
-        }));
-        pagination(results, page, totalPages, next => { page = next; render(); results.scrollIntoView({ block: 'start' }); });
+        }, 'Requisitos que coinciden con los filtros'));
+        pagination(results, page, totalPages, (next, direction) => {
+          page = next;
+          render();
+          const buttons = results.querySelectorAll('.data-pagination button');
+          buttons[direction === 'next' ? 1 : 0].focus();
+          results.scrollIntoView({ block: 'start' });
+        });
       }
       render();
       sourceNote(root, 'Fuente: Registro Maestro, versión 1.0; 12/10/2026. Cada resultado es un requisito vigente.', files.requirements, 'Descargar CSV completo');
@@ -340,7 +355,7 @@
           cell(tr, row.descripcion_motivo);
           cell(tr, row.version_origen + ' → ' + row.version_destino);
           return tr;
-        }));
+        }, 'Eventos de cambio que coinciden con los filtros'));
       }
       render();
       sourceNote(root, 'Fuente: Historial de Cambios. La fecha y las versiones se muestran en cada evento.', files.changes, 'Descargar CSV completo');

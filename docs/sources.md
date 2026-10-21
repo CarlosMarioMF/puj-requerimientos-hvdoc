@@ -1,4 +1,6 @@
-# Fuentes y documentos
+# Fuentes y método
+
+Esta página permite consultar los artefactos que sostienen la documentación y explica cómo se interpretan sus cifras. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil del Hospital Virtual</a> organiza el relato del proyecto; los anexos contienen la formulación detallada; los CSV permiten explorar la línea base y su evolución.
 
 ## Jerarquía documental
 
@@ -19,6 +21,18 @@ Las páginas sintetizan los documentos académicos y conservan sus referencias. 
 Los archivos **PDF** pueden abrirse en el navegador; los **DOCX y CSV** se ofrecen para descarga. Las respuestas individuales del cuestionario no se publican: se presentan solo agregados.
 
 Las copias CSV alimentan el [panel de resultados](/data/dashboard), el [explorador de requisitos](/data/requirements) y el [explorador de cambios](/data/changes). Los valores de historias y Story Points se toman del anexo de planificación, no del recuento de filas del registro.
+
+## Corte documental y método de lectura
+
+| Fuente | Corte utilizado | Unidad que permite contar |
+| --- | --- | --- |
+| <a href="assets/documents/agile-project-document.docx" download>Documento Ágil del Hospital Virtual</a> | Versión 0.4, 19 de octubre de 2026 | Relato, decisiones y síntesis; no es una tabla de filas. |
+| <a href="assets/documents/requirements-specification.docx" download>Especificación de Requisitos</a> | Versión documental 1.1; línea base LB-1.0 | Requisitos vigentes y sus atributos. |
+| <a href="assets/documents/user-stories-product-backlog.docx" download>Historias de Usuario y Product Backlog</a> | Versión documental 1.1 | Historias vigentes y esfuerzo relativo en Story Points. |
+| <a href="assets/documents/requirements-register.csv" download>Registro Maestro de Requisitos</a> | Versión 1.0; registros fechados el 12 de octubre de 2026 | Una fila por requisito vigente. |
+| <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> | Fecha y versiones consignadas en cada evento | Una fila por decisión de cambio. |
+
+Para seguir una afirmación, se consulta primero la sección del <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> que la explica y luego el anexo o la fila con su identificador. La [obtención](/process/elicitation), la [especificación](/process/specification), la [priorización](/process/prioritization), la [validación](/process/validation), la [negociación](/process/negotiation) y la [gestión](/process/management) muestran cómo se llegó a la línea base. El sitio es una síntesis de ese ejercicio académico; los archivos enlazados conservan el detalle.
 
 ## Límites de interpretación
 

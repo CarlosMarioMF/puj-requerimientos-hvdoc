@@ -21,8 +21,8 @@ El diagrama distingue responsabilidades del médico general, sistema, especialis
 Los storyboards utilizados en la obtención muestran dos recorridos: la reserva de una cita por una paciente y la consulta de agenda/preparación semanal de un profesional. Son **escenarios narrativos**, distintos del prototipo interactivo que menciona el <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a>.
 
 <div class="site-figure-grid">
-  <figure class="site-figure"><a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer"><img src="assets/images/patient-storyboard.png" alt="Storyboard de una paciente que reserva una cita virtual"></a><figcaption>Paciente: acceso, selección de cita y confirmación.</figcaption></figure>
-  <figure class="site-figure"><a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer"><img src="assets/images/clinician-storyboard.jpeg" alt="Storyboard de un profesional que consulta agenda y prepara la semana"></a><figcaption>Profesional: agenda, información previa y reporte semanal.</figcaption></figure>
+  <figure class="site-figure"><a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer"><img src="assets/images/patient-storyboard.png" alt="Storyboard de una paciente que reserva una cita virtual"></a><figcaption>Paciente: acceso, selección de cita y confirmación. <a href="assets/images/patient-storyboard.png" target="_blank" rel="noopener noreferrer">Abrir imagen en tamaño completo</a>.</figcaption></figure>
+  <figure class="site-figure"><a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer"><img src="assets/images/clinician-storyboard.jpeg" alt="Storyboard de un profesional que consulta agenda y prepara la semana"></a><figcaption>Profesional: agenda, información previa y reporte semanal. <a href="assets/images/clinician-storyboard.jpeg" target="_blank" rel="noopener noreferrer">Abrir imagen en tamaño completo</a>.</figcaption></figure>
 </div>
 
 ## Atributos de calidad
