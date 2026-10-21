@@ -7,7 +7,15 @@
 .site-figure-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
 .site-figure-grid .site-figure { margin: .5rem 0; }
 .site-file-link { padding: .85rem 1rem; background: #f1f7fa; border-left: 4px solid #267ab2; }
-@media (max-width: 700px) { .site-figure-grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) {
+  .markdown-section { box-sizing: border-box; width: calc(100% - 24px); max-width: none; }
+  .markdown-section h1 { font-size: 1.8rem; }
+  .markdown-section h2 { font-size: 1.35rem; }
+  .markdown-section table { width: 100%; box-sizing: border-box; }
+  .markdown-section img, .markdown-section svg, .markdown-section iframe { max-width: 100%; }
+  .site-figure, .site-figure-grid .site-figure { margin: 1rem 0; }
+  .site-figure-grid { grid-template-columns: 1fr; }
+}
 
 .data-view { margin: 1.5rem 0 2rem; }
 .data-controls { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; margin: 1rem 0; padding: 1rem; background: #f3f7fa; border: 1px solid #d8e4eb; border-radius: 10px; }
@@ -57,4 +65,4 @@
 #hvu-changes .data-table { min-width: 1040px; }
 #hvu-requirements .data-table th, #hvu-requirements .data-table td, #hvu-changes .data-table th, #hvu-changes .data-table td { overflow-wrap: normal; word-break: normal; }
 @media (max-width: 900px) { .data-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 650px) { .markdown-section:has(.data-view) { width: calc(100% - 24px); } .data-chart-grid, .data-metrics { grid-template-columns: 1fr; } .data-controls { padding: .8rem; } .data-field, .data-field:first-child { flex-basis: 100%; } .data-reset { width: 100%; } }
+@media (max-width: 700px) { .markdown-section:has(.data-view) { width: calc(100% - 24px); } .data-chart-grid, .data-metrics { grid-template-columns: 1fr; } .data-controls { padding: .8rem; } .data-field, .data-field:first-child { flex-basis: 100%; } .data-reset { width: 100%; } }
