@@ -6,6 +6,10 @@
 
 El proyecto gestiona, por una parte, cada requisito e historia; por otra, las versiones de los documentos y la línea base. El <a href="assets/documents/requirements-register.csv" download>Registro Maestro</a> conserva el **estado vigente** de 83 requisitos. El <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> conserva **15 decisiones de cambio**. Son fuentes complementarias, no dos listas independientes de requisitos actuales.
 
+<div id="hvu-management-chart" class="data-view data-spotlight"><p>Cargando tipos de cambio…</p></div>
+
+La barra más larga muestra el tipo de decisión más frecuente en este corte del historial; cada evento puede afectar a más de un requisito.
+
 El [explorador de requisitos](/data/requirements) muestra el estado vigente. El [explorador de cambios](/data/changes) permite buscar las decisiones históricas por identificador y tipo de cambio; el [panel de resultados](/data/dashboard) compara las distribuciones sin mezclar sus unidades.
 
 ## Atributos de gestión

@@ -6,13 +6,9 @@
 
 La consolidación produjo **83 requisitos vigentes**, con identificador y redacción formal. La clasificación distingue qué comportamiento debe ofrecer el sistema, bajo qué condiciones de calidad y cuáles son las restricciones del proyecto.
 
-| Familia | Cantidad | Qué documenta |
-| --- | ---: | --- |
-| RFL · funcionales | 53 | Servicios, acciones e intercambios que el sistema debe realizar. |
-| RNF · no funcionales | 22 | Seguridad, rendimiento, disponibilidad, usabilidad, integridad e interoperabilidad. |
-| RPY · proyecto/negocio | 8 | Restricciones y condiciones de ejecución. |
+<div id="hvu-specification-chart" class="data-view data-spotlight"><p>Cargando distribución de requisitos…</p></div>
 
-La suma **53 + 22 + 8 = 83** corresponde al <a href="assets/documents/requirements-register.csv" download>Registro Maestro de Requisitos</a> y a la línea base descrita en el <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a>. Los requisitos se organizan además por categoría o módulo; por ejemplo, `RFL / Citas` y `RNF / Seguridad y privacidad`.
+La visualización se calcula desde el <a href="assets/documents/requirements-register.csv" download>Registro Maestro de Requisitos</a>. Los requisitos se organizan además por categoría o módulo; por ejemplo, `RFL / Citas` y `RNF / Seguridad y privacidad`.
 
 ## Qué conserva cada requisito
 

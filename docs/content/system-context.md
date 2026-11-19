@@ -4,18 +4,22 @@
 
 ## Propósito y objetivos
 
-El proyecto busca definir y planificar una aplicación web que apoye la gestión de actividades médicas y académicas del Hospital Virtual Universitario. Su objetivo general combina **atención virtual segura**, **trazabilidad de las actividades** e **interoperabilidad** con los servicios institucionales.
+El proyecto busca definir y planificar una aplicación web que apoye la gestión de actividades médicas y académicas del Hospital Virtual Universitario.
 
-Sus objetivos específicos abarcan citas, agendas, teleconsultas y remisiones; consulta y gestión controlada de información clínica; prácticas de estudiantes; facturación, pagos y reportes; y atributos de calidad necesarios para prestar el servicio.
+<div class="site-principle-grid" aria-label="Objetivos centrales del sistema">
+  <article class="site-principle-card"><span>01</span><h3>Atención virtual segura</h3><p>Coordinar citas, teleconsultas, información clínica y remisiones.</p></article>
+  <article class="site-principle-card"><span>02</span><h3>Trazabilidad</h3><p>Conservar el seguimiento de actividades médicas, académicas y administrativas.</p></article>
+  <article class="site-principle-card"><span>03</span><h3>Interoperabilidad</h3><p>Conectarse con los servicios institucionales que complementan al Hospital Virtual.</p></article>
+</div>
 
 ## Actores y capacidades
 
-| Actor | Interacción principal |
-| --- | --- |
-| Paciente | Solicita atención, consulta citas y documentos autorizados, participa en teleconsultas. |
-| Profesional de la salud | Gestiona agenda y atención, consulta información clínica según permisos y tramita remisiones. |
-| Estudiante | Participa en actividades académicas autorizadas y supervisadas. |
-| Personal administrativo | Coordina procesos operativos, facturación, reportes y configuración según su rol. |
+<div class="site-actor-grid">
+  <article class="site-actor-card"><span class="site-card-kicker">Atención</span><h3>Paciente</h3><p>Solicita atención, consulta sus citas y documentos autorizados, y participa en teleconsultas.</p></article>
+  <article class="site-actor-card"><span class="site-card-kicker">Atención clínica</span><h3>Profesional de la salud</h3><p>Gestiona agenda y atención, consulta información según sus permisos y tramita remisiones.</p></article>
+  <article class="site-actor-card"><span class="site-card-kicker">Formación</span><h3>Estudiante</h3><p>Participa en actividades académicas autorizadas y supervisadas.</p></article>
+  <article class="site-actor-card"><span class="site-card-kicker">Operación</span><h3>Personal administrativo</h3><p>Coordina procesos operativos, facturación, reportes y configuración según su rol.</p></article>
+</div>
 
 También intervienen supervisores y coordinadores académicos, responsables clínicos y financieros, la Universidad y varios sistemas externos. No todos son usuarios directos de las mismas funciones.
 
@@ -23,13 +27,20 @@ También intervienen supervisores y coordinadores académicos, responsables clí
 
 El sistema **coordina** los procesos del Hospital Virtual; no sustituye herramientas especializadas. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> fija, entre otros, estos límites:
 
-| Dentro de la línea base | Responsabilidad externa o excluida |
-| --- | --- |
-| Gestión de usuarios, permisos, citas, agendas, teleconsultas y remisiones. | El EHR/ECE institucional conserva la historia clínica electrónica especializada. |
-| Registro y consulta controlada de información y documentos clínicos. | Un servicio externo proporciona audio y video de la teleconsulta. |
-| Prácticas, supervisión, evaluación y recursos educativos. | El sistema de facturación hospitalaria emite formalmente la factura electrónica. |
-| Coordinación de pagos y estados, reportes e integraciones. | La pasarela procesa tarjetas y PSE; la aplicación no almacena datos completos de tarjetas. |
-| Correo y notificaciones dentro de la aplicación. | SMS y notificaciones push quedan fuera de la línea base inicial. |
+<div class="site-boundary-grid">
+  <section class="site-boundary-card site-boundary-in"><span class="site-card-kicker">Responsabilidad del producto</span><h3>Dentro del sistema</h3><ul>
+    <li>Usuarios, permisos, citas, agendas, teleconsultas y remisiones.</li>
+    <li>Registro y consulta controlada de información y documentos clínicos.</li>
+    <li>Prácticas, supervisión, evaluación y recursos educativos.</li>
+    <li>Coordinación de pagos, reportes, integraciones, correo y notificaciones.</li>
+  </ul></section>
+  <section class="site-boundary-card site-boundary-out"><span class="site-card-kicker">Servicios especializados</span><h3>Fuera o delegados</h3><ul>
+    <li>El EHR/ECE institucional conserva la historia clínica electrónica especializada.</li>
+    <li>Un servicio externo proporciona audio y video de la teleconsulta.</li>
+    <li>El sistema hospitalario emite la factura; la pasarela procesa tarjetas y PSE.</li>
+    <li>La aplicación no almacena datos completos de tarjetas; SMS y push están fuera del alcance inicial.</li>
+  </ul></section>
+</div>
 
 Las integraciones previstas incluyen EHR/ECE, videoconferencia, correo, facturación, pasarela de pagos, sistema contable y Google Calendar para exportar citas sin información clínica.
 

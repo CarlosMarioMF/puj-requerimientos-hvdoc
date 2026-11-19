@@ -121,25 +121,26 @@
     return card;
   }
 
-  function chart(title, entries, total, description) {
-    const section = element('section', 'data-chart');
+  function chart(title, entries, total, description, insight) {
+    const section = element('section', 'data-chart data-spotlight-chart');
     section.append(element('h3', '', title));
     section.append(element('p', 'data-chart-description', description));
     const list = element('div', 'data-bars');
-    const maximum = Math.max(1, ...entries.map(([, value]) => value));
     entries.forEach(([label, value]) => {
       const item = element('div', 'data-bar-row');
       const top = element('div', 'data-bar-label');
       top.append(element('span', '', label));
       top.append(element('strong', '', value + ' · ' + (total ? Math.round(value * 100 / total) : 0) + '%'));
       const track = element('div', 'data-bar-track');
+      track.setAttribute('aria-hidden', 'true');
       const bar = element('span', 'data-bar-fill');
-      bar.style.width = (value * 100 / maximum) + '%';
+      bar.style.width = (total ? value * 100 / total : 0) + '%';
       track.append(bar);
       item.append(top, track);
       list.append(item);
     });
     section.append(list);
+    if (insight) section.append(element('p', 'data-story', insight));
     return section;
   }
 
@@ -259,6 +260,85 @@
     } catch (error) { errorMessage(root, error); }
   }
 
+  async function mountSpecificationChart(root) {
+    try {
+      const rows = await load('requirements');
+      if (!root.isConnected) return;
+      clear(root);
+      const entries = countBy(rows.map(row => ({ family: family(row) })), 'family');
+      const labels = { RFL: 'funcionales', RNF: 'no funcionales', RPY: 'de proyecto' };
+      const leading = entries[0];
+      const share = Math.round(leading[1] * 100 / rows.length);
+      root.append(chart(
+        'Línea base por familia', entries, rows.length,
+        'Cada barra muestra cuántos requisitos vigentes pertenecen a esa familia.',
+        'La familia ' + (labels[leading[0]] || leading[0]) + ' reúne ' + leading[1] + ' de ' + rows.length + ' requisitos (' + share + '%).'
+      ));
+      sourceNote(root, 'Fuente: Registro Maestro, versión 1.0; 12/10/2026.', files.requirements, 'Descargar CSV');
+    } catch (error) { errorMessage(root, error); }
+  }
+
+  function mountPrioritizationChart(root) {
+    if (!root.isConnected) return;
+    clear(root);
+    // Totals from the version 1.1 Product Backlog, also summarized in the site content.
+    const releases = [
+      { label: 'Release 1 · MUST', stories: 22, points: 189 },
+      { label: 'Release 2 · SHOULD', stories: 14, points: 126 },
+      { label: 'Release 3 · COULD', stories: 4, points: 39 }
+    ];
+    const totalStories = releases.reduce((sum, release) => sum + release.stories, 0);
+    const totalPoints = releases.reduce((sum, release) => sum + release.points, 0);
+    const panel = element('section', 'data-spotlight-panel');
+    panel.append(element('h3', '', 'Historias y esfuerzo por entrega'));
+    panel.append(element('p', 'data-chart-description', 'Alterna la unidad para comparar cómo se distribuye el alcance planificado.'));
+    const controls = element('div', 'data-chart-toggle');
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Unidad del gráfico');
+    const storiesButton = element('button', '', 'Historias');
+    const pointsButton = element('button', '', 'Story Points');
+    [storiesButton, pointsButton].forEach(button => { button.type = 'button'; });
+    controls.append(storiesButton, pointsButton);
+    const visual = element('div');
+    panel.append(controls, visual);
+
+    function render(unit) {
+      const isStories = unit === 'stories';
+      const total = isStories ? totalStories : totalPoints;
+      const key = isStories ? 'stories' : 'points';
+      storiesButton.setAttribute('aria-pressed', String(isStories));
+      pointsButton.setAttribute('aria-pressed', String(!isStories));
+      clear(visual);
+      visual.append(chart(
+        'Distribución de ' + (isStories ? 'historias' : 'Story Points'),
+        releases.map(release => [release.label, release[key]]), total,
+        'El porcentaje representa la parte del total de ' + total + ' ' + (isStories ? 'historias' : 'puntos') + ' asignada a cada entrega.',
+        'Release 1 concentra ' + releases[0].stories + ' historias (' + Math.round(releases[0].stories * 100 / totalStories) + '%) y ' + releases[0].points + ' puntos (' + Math.round(releases[0].points * 100 / totalPoints) + '%) del esfuerzo planificado.'
+      ));
+    }
+    storiesButton.addEventListener('click', () => render('stories'));
+    pointsButton.addEventListener('click', () => render('points'));
+    root.append(panel);
+    sourceNote(root, 'Fuente: Product Backlog, versión documental 1.1.', new URL('user-stories-product-backlog.docx', base), 'Descargar Product Backlog');
+    render('stories');
+  }
+
+  async function mountManagementChart(root) {
+    try {
+      const rows = await load('changes');
+      if (!root.isConnected) return;
+      clear(root);
+      const entries = countBy(rows, 'tipo_cambio');
+      const leading = entries[0];
+      root.append(chart(
+        'Eventos registrados por tipo', entries, rows.length,
+        'Cada barra representa eventos del Historial de Cambios; un evento puede afectar varios requisitos.',
+        'El tipo más frecuente es «' + leading[0] + '», con ' + leading[1] + ' de ' + rows.length + ' eventos (' + Math.round(leading[1] * 100 / rows.length) + '%).'
+      ));
+      sourceNote(root, 'Fuente: Historial de Cambios.', files.changes, 'Descargar CSV');
+    } catch (error) { errorMessage(root, error); }
+  }
+
   async function mountRequirements(root) {
     try {
       const rows = await load('requirements');
@@ -365,9 +445,15 @@
   window.$docsify.plugins = (window.$docsify.plugins || []).concat(function (hook) {
     hook.doneEach(function () {
       const dashboard = document.getElementById('hvu-dashboard');
+      const specification = document.getElementById('hvu-specification-chart');
+      const prioritization = document.getElementById('hvu-prioritization-chart');
+      const management = document.getElementById('hvu-management-chart');
       const requirements = document.getElementById('hvu-requirements');
       const changes = document.getElementById('hvu-changes');
       if (dashboard) mountDashboard(dashboard);
+      if (specification) mountSpecificationChart(specification);
+      if (prioritization) mountPrioritizationChart(prioritization);
+      if (management) mountManagementChart(management);
       if (requirements) mountRequirements(requirements);
       if (changes) mountChanges(changes);
     });

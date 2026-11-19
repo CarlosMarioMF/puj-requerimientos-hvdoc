@@ -12,6 +12,14 @@ La relación propuesta en el <a href="assets/documents/agile-project-document.do
 
 El médico general crea y envía la remisión (**HU-05A**). El especialista la acepta o rechaza (**HU-05B**). Si hay aceptación, el paciente confirma o rechaza la atención especializada (**HU-05C**). El sistema notifica los cambios y conserva los momentos necesarios para medir tiempos de respuesta. Este flujo corresponde a **RFL-M001–RFL-M004**.
 
+<ol class="site-workflow" aria-label="Pasos del flujo de remisión">
+  <li><span>HU-05A · Médico general</span><h3>Crear y enviar</h3><p>Registra el motivo, la prioridad y los soportes clínicos de la solicitud.</p></li>
+  <li><span>HU-05B · Especialista</span><h3>Revisar y responder</h3><p>Acepta o rechaza la remisión y deja una observación.</p></li>
+  <li><span>HU-05C · Paciente</span><h3>Confirmar la atención</h3><p>Si el especialista acepta, el paciente confirma o rechaza la cita propuesta.</p></li>
+</ol>
+
+<p class="site-visual-note">En cada paso, el sistema registra el cambio de estado y notifica a los actores correspondientes.</p>
+
 <p class="site-file-link"><a href="assets/files/referral-activity-diagram.pdf" target="_blank" rel="noopener noreferrer">Abrir el diagrama de actividades de remisión (PDF)</a></p>
 
 El diagrama distingue responsabilidades del médico general, sistema, especialista y paciente. Ayuda a explicar decisiones y estados que una lista de requisitos no muestra con la misma claridad.
@@ -29,14 +37,14 @@ Los storyboards utilizados en la obtención muestran dos recorridos: la reserva 
 
 El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> resume umbrales verificables de los requisitos no funcionales de la <a href="assets/documents/requirements-specification.docx" download>Especificación de Requisitos</a>. Algunos ejemplos:
 
-| Atributo | Criterio registrado |
-| --- | --- |
-| Rendimiento | Al menos 95 % de operaciones de citas en ≤ 3 s con hasta 100 usuarios autenticados concurrentes. |
-| Disponibilidad | Mínimo mensual de 99,5 %, excluyendo mantenimientos notificados. |
-| Recuperación | Interrupción crítica recuperada en un máximo de 2 horas. |
-| Seguridad | Acceso por rol y mínimo privilegio; MFA para profesionales y administrativos; auditoría sensible. |
-| Usabilidad | Tareas y tiempos medibles para pacientes con poca experiencia tecnológica y profesionales. |
-| Integridad | Evitar dobles reservas y controlar el intercambio financiero. |
+<div class="site-quality-grid">
+  <article class="site-quality-card"><span>Rendimiento</span><strong>≤ 3 s</strong><p>Al menos 95 % de operaciones de citas, con hasta 100 usuarios concurrentes.</p></article>
+  <article class="site-quality-card"><span>Disponibilidad</span><strong>99,5 %</strong><p>Mínimo mensual, excluyendo mantenimientos notificados.</p></article>
+  <article class="site-quality-card"><span>Recuperación</span><strong>≤ 2 h</strong><p>Tiempo máximo para recuperar una interrupción crítica.</p></article>
+  <article class="site-quality-card"><span>Seguridad</span><strong>MFA + roles</strong><p>Mínimo privilegio y auditoría para accesos sensibles.</p></article>
+  <article class="site-quality-card"><span>Usabilidad</span><strong>Tareas medibles</strong><p>Para pacientes con poca experiencia tecnológica y profesionales.</p></article>
+  <article class="site-quality-card"><span>Integridad</span><strong>Sin duplicados</strong><p>Evitar dobles reservas y controlar el intercambio financiero.</p></article>
+</div>
 
 Estos criterios describen **requisitos para el producto**, no resultados de mediciones sobre un sistema construido.
 

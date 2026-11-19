@@ -6,12 +6,15 @@
 
 Las funcionalidades previstas para releases posteriores **siguen dentro de la línea base**. Se planifican después del MVP operativo integral, conservando su identificador y trazabilidad.
 
-| Release | Prioridad | Historias | Puntos | Alcance principal |
-| --- | --- | ---: | ---: | --- |
-| 1 · MVP operativo integral | MUST | 22 | 189 | Capacidades clínicas, académicas, financieras y de interoperabilidad esenciales. |
-| 2 · Evolución funcional | SHOULD | 14 | 126 | Recordatorios, cambios de cita, mensajería, seguimiento, formación y finanzas complementarias. |
-| 3 · Complementarias | COULD | 4 | 39 | Google Calendar, recursos educativos, reportes y recursos médicos. |
-| **Total** | | **40** | **354** | Backlog consolidado. |
+<div class="site-release-roadmap" aria-label="Roadmap de releases">
+  <article class="site-release-card"><span class="site-release-priority">MUST · MVP</span><h3>Release 1</h3><p>Capacidades clínicas, académicas, financieras y de interoperabilidad para operar los procesos esenciales.</p></article>
+  <article class="site-release-card"><span class="site-release-priority">SHOULD · Evolución</span><h3>Release 2</h3><p>Recordatorios, cambios de cita, mensajería, seguimiento, formación y finanzas complementarias.</p></article>
+  <article class="site-release-card"><span class="site-release-priority">COULD · Complementaria</span><h3>Release 3</h3><p>Google Calendar, recursos educativos, reportes y recursos médicos.</p></article>
+</div>
+
+<p class="site-visual-note">Las releases representan alcance priorizado: lo esencial primero, seguido de capacidades de evolución y elementos complementarios.</p>
+
+La distribución cuantitativa de las **40 historias** y los **354 puntos** se compara en [priorización](/process/prioritization).
 
 ## Qué cambió durante la consolidación
 

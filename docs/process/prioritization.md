@@ -22,10 +22,8 @@ El backlog pasó de **35 a 40 historias**, con **354 SP** en total. Los IDs inic
 
 ## Resultado por entrega
 
-| Entrega | MoSCoW | Historias | Story Points |
-| --- | --- | ---: | ---: |
-| Release 1 · MVP operativo integral | MUST | 22 | 189 |
-| Release 2 · evolución funcional | SHOULD | 14 | 126 |
-| Release 3 · complementarias | COULD | 4 | 39 |
+El siguiente gráfico permite alternar entre el número de historias y el esfuerzo relativo planificado. La primera entrega reúne capacidades de atención, formación, finanzas e interoperabilidad necesarias para completar procesos esenciales.
 
-La primera entrega incorpora capacidades de atención, formación, finanzas e interoperabilidad necesarias para completar procesos esenciales. El [Story Mapping](/content/epics-story-map) muestra cómo las 40 HU se sitúan en el recorrido del producto.
+<div id="hvu-prioritization-chart" class="data-view data-spotlight"><p>Cargando distribución del backlog…</p></div>
+
+El [Story Mapping](/content/epics-story-map) muestra cómo las 40 HU se sitúan en el recorrido del producto.

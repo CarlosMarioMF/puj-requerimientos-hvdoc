@@ -4,31 +4,33 @@
 
 ## Cinco macroépicas
 
-| Macroépica | Módulos y capacidades principales |
-| --- | --- |
-| Atención médica virtual y gestión de citas | Citas, agenda, teleconsulta, cambios, comunicación y remisiones. |
-| Gestión clínica y documentos | Historia clínica, resultados, evolución de la atención, fórmulas y documentos. |
-| Formación y prácticas clínicas | Prácticas, supervisión, consentimiento, participación estudiantil y evaluación. |
-| Operación administrativa, financiera y de recursos | Facturación, pagos, reembolsos, conciliación, reportes y recursos médicos. |
-| Plataforma, seguridad e interoperabilidad | Acceso, navegación, roles, auditoría, calidad e integración con sistemas externos. |
+<div class="site-epic-grid">
+  <article class="site-epic-card"><span>01</span><h3>Atención médica virtual</h3><p>Citas, agenda, teleconsulta, cambios, comunicación y remisiones.</p></article>
+  <article class="site-epic-card"><span>02</span><h3>Gestión clínica</h3><p>Historia clínica, resultados, evolución de la atención, fórmulas y documentos.</p></article>
+  <article class="site-epic-card"><span>03</span><h3>Formación clínica</h3><p>Prácticas, supervisión, consentimiento, participación estudiantil y evaluación.</p></article>
+  <article class="site-epic-card"><span>04</span><h3>Operación del hospital</h3><p>Facturación, pagos, reembolsos, conciliación, reportes y recursos médicos.</p></article>
+  <article class="site-epic-card"><span>05</span><h3>Plataforma e integración</h3><p>Acceso, roles, auditoría, calidad e integración con sistemas externos.</p></article>
+</div>
 
 Las macroépicas agrupan el producto; no representan pasos consecutivos. El <a href="assets/files/use-case-diagram.pdf" target="_blank" rel="noopener noreferrer">diagrama general de casos de uso (PDF)</a> muestra las interacciones de los actores a un nivel más alto que las historias individuales.
 
 ## User Story Mapping
 
-El *backbone* del mapa sí recorre el producto de principio a fin. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> distribuye las **40 historias implementables** sobre ocho actividades y tres releases:
+El *backbone* del mapa recorre el producto de principio a fin. Estas ocho actividades muestran dónde se agrupan las **40 historias implementables** en las tres entregas:
 
-| Actividad del recorrido | Release 1 · MUST | Release 2 · SHOULD | Release 3 · COULD |
-| --- | --- | --- | --- |
-| Acceder y orientarse | HU-01, HU-08 | — | — |
-| Solicitar y organizar la atención | HU-02, HU-07, HU-06 | HU-09, HU-13 | HU-14 |
-| Preparar información clínica | HU-10, HU-11, HU-03A, HU-03B | — | — |
-| Realizar y seguir la atención | HU-04, HU-03C, HU-15 | HU-12, HU-16 | — |
-| Continuidad especializada | HU-05A, HU-05B, HU-05C | — | — |
-| Coordinar formación y práctica clínica | HU-19, HU-17, HU-18 | HU-20 a HU-27 | HU-28 |
-| Cerrar el ciclo financiero e interoperar | HU-29, HU-30, HU-33A, HU-33B | HU-31, HU-32 | — |
-| Analizar y soportar la operación | — | — | HU-34, HU-35 |
+<div class="site-story-map" role="list" aria-label="Recorrido de usuario y ubicación de historias por release">
+  <article class="site-story-step" role="listitem"><span class="site-step-number">01</span><h3>Acceder</h3><p><b>R1</b> HU-01, HU-08</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">02</span><h3>Solicitar atención</h3><p><b>R1</b> HU-02, HU-07, HU-06</p><p><b>R2</b> HU-09, HU-13</p><p><b>R3</b> HU-14</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">03</span><h3>Preparar información</h3><p><b>R1</b> HU-10, HU-11, HU-03A, HU-03B</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">04</span><h3>Atender y dar seguimiento</h3><p><b>R1</b> HU-04, HU-03C, HU-15</p><p><b>R2</b> HU-12, HU-16</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">05</span><h3>Continuidad especializada</h3><p><b>R1</b> HU-05A, HU-05B, HU-05C</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">06</span><h3>Formar y practicar</h3><p><b>R1</b> HU-19, HU-17, HU-18</p><p><b>R2</b> HU-20 a HU-27</p><p><b>R3</b> HU-28</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">07</span><h3>Cerrar ciclo financiero</h3><p><b>R1</b> HU-29, HU-30, HU-33A, HU-33B</p><p><b>R2</b> HU-31, HU-32</p></article>
+  <article class="site-story-step" role="listitem"><span class="site-step-number">08</span><h3>Analizar y soportar</h3><p><b>R3</b> HU-34, HU-35</p></article>
+</div>
 
-**Lectura:** la ubicación en una release expresa alcance de planificación; el orden interno de construcción depende del backlog y sus relaciones. Release 1 reúne 22 HU (189 SP), Release 2 reúne 14 HU (126 SP) y Release 3 reúne 4 HU (39 SP).
+<p class="site-visual-note">R1 · MUST <span>R2 · SHOULD</span> <span>R3 · COULD</span></p>
+
+**Lectura:** la ubicación en una release expresa alcance de planificación; el orden interno de construcción depende del backlog y sus relaciones. La distribución de historias y esfuerzo se presenta en [priorización](/process/prioritization).
 
 La relación de estas historias con la línea base se desarrolla en [características y backlog](/content/features-backlog) y [priorización](/process/prioritization).
