@@ -13,13 +13,15 @@ El trabajo combinó fuentes y técnicas para observar el problema desde perspect
 | Contexto y análisis de frontera | Identificar actores, procesos, documentos, sistemas externos y exclusiones. | <a href="assets/documents/system-context.pdf" target="_blank" rel="noopener noreferrer">Documento de Contexto</a> y <a href="assets/images/context-diagram.png" target="_blank" rel="noopener noreferrer">Diagrama de Contexto</a>. |
 | Lluvia de ideas 365 | Explorar capacidades candidatas antes de consolidarlas. | Descrita en el <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a>. |
 | Entrevista al líder PM/PO | Aclarar objetivos, alcance, restricciones y prioridades. | <a href="assets/documents/project-lead-interview.pdf" target="_blank" rel="noopener noreferrer">Entrevista al Líder del Proyecto</a>; el PDF contiene preguntas, sin respuestas diligenciadas. |
-| Cuestionario de pacientes | Escuchar necesidades y preocupaciones en torno a la atención virtual. | <a href="assets/documents/patient-questionnaire.pdf" target="_blank" rel="noopener noreferrer">Cuestionario de Pacientes</a> y siete respuestas anónimas resumidas abajo. |
+| Cuestionario de pacientes | Escuchar necesidades y preocupaciones en torno a la atención virtual. | <a href="assets/documents/patient-questionnaire.pdf" target="_blank" rel="noopener noreferrer">Cuestionario de Pacientes</a> y <a href="assets/documents/patient-survey-summary.csv" download>resumen agregado de respuestas</a>. |
 | Escenarios y storyboards | Seguir tareas concretas del paciente y del profesional; detectar acciones e información necesaria. | <a href="assets/documents/scenarios-storyboards.docx" download>Escenarios y Storyboards</a> de paciente y profesional. |
 | Revisión documental | Contrastar hallazgos, consolidar y precisar requisitos. | <a href="assets/documents/requirements-specification.docx" download>Especificación de Requisitos</a>. |
 
 ## Qué mostraron las respuestas de pacientes
 
-Entre **siete respuestas**, seis marcaron consulta de resultados de exámenes y seis consulta de historia clínica como funciones deseadas. Cinco marcaron agendamiento en línea y cinco recordatorios. Las siete indicaron preocupación por la **calidad del diagnóstico sin examen físico**. Estos conteos orientan la discusión, pero el grupo no es una muestra estadísticamente representativa de todos los pacientes.
+El anexo reúne **siete respuestas**. La gráfica muestra qué funcionalidades eligieron y destaca la preocupación compartida sobre la **calidad del diagnóstico sin examen físico**. Estos conteos ayudan a explicar cómo las respuestas aportaron evidencia a la obtención; el grupo no es una muestra estadísticamente representativa de todos los pacientes.
+
+<div id="hvu-patient-survey" class="data-view data-survey-view"><p>Cargando resumen de respuestas…</p></div>
 
 ## Dos recorridos para hacer visibles las necesidades
 

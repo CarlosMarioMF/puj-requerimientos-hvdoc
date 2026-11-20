@@ -13,7 +13,7 @@
 | [Historial de Cambios](../docs/assets/documents/requirements-change-log.csv) | Evolución estructurada | Cronología y tipos de los 15 cambios registrados. |
 | [Documento de Contexto](../docs/assets/documents/system-context.pdf) y [Diagrama de Contexto](../docs/assets/images/context-diagram.png) | Evidencia de frontera | Actores, sistemas vecinos, intercambios y zonas grises. |
 | [Entrevista al Líder del Proyecto](../docs/assets/documents/project-lead-interview.pdf) | Instrumento de obtención | Preguntas de entrevista; el PDF disponible no contiene respuestas diligenciadas. |
-| [Cuestionario de Pacientes](../docs/assets/documents/patient-questionnaire.pdf) y respuestas agregadas | Instrumento y respuestas | Técnica, temas consultados y agregados de siete respuestas anónimas. |
+| [Cuestionario de Pacientes](../docs/assets/documents/patient-questionnaire.pdf), respuestas agregadas y [resumen publicable](../docs/assets/documents/patient-survey-summary.csv) | Instrumento y respuestas | Técnica, temas consultados y recuentos agregados de siete respuestas; no incluye registros individuales. |
 | [Escenarios y Storyboards](../docs/assets/documents/scenarios-storyboards.docx) | Escenarios narrativos | Recorridos del paciente y del profesional. |
 | [Diagrama General de Casos de Uso](../docs/assets/files/use-case-diagram.pdf) | Modelo funcional | Relaciones generales entre actores y casos de uso. |
 | [Diagrama de Actividades de Remisión](../docs/assets/files/referral-activity-diagram.pdf) | Modelo de proceso | Secuencia, decisiones y responsabilidades entre actores. |

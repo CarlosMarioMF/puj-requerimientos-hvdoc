@@ -1,0 +1,9 @@
+grupo,opcion,conteo,participantes,tipo_respuesta
+funcionalidades,Ver resultados de exámenes en línea,6,7,multiple
+funcionalidades,Acceder a mi historial clínico,6,7,multiple
+funcionalidades,Recibir recordatorios de citas y medicamentos,5,7,multiple
+funcionalidades,Agendar citas en línea,5,7,multiple
+funcionalidades,Recibir recetas/fórmulas médicas digitales,4,7,multiple
+funcionalidades,Pagar consultas en línea,4,7,multiple
+funcionalidades,Comunicarme con mi médico por chat,4,7,multiple
+preocupacion,Calidad del diagnóstico sin examen físico,7,7,unica

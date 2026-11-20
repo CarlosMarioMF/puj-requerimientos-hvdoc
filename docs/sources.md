@@ -11,7 +11,7 @@ Esta página permite consultar los artefactos que sostienen la documentación y 
 | Planificación | <a href="assets/documents/user-stories-product-backlog.docx" download>Historias de Usuario y Product Backlog · DOCX</a> | Contiene historias, aceptación, estimaciones, releases y trazabilidad. |
 | Datos estructurados | <a href="assets/documents/requirements-register.csv" download>Registro Maestro de Requisitos · CSV</a> y <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios · CSV</a> | Representan el estado vigente y la evolución, respectivamente. |
 | Contexto | <a href="assets/documents/system-context.pdf" target="_blank" rel="noopener noreferrer">Documento de Contexto del Sistema · PDF</a> | Amplía el análisis de actores, procesos y frontera. |
-| Obtención | <a href="assets/documents/project-lead-interview.pdf" target="_blank" rel="noopener noreferrer">Entrevista al Líder del Proyecto · PDF</a> y <a href="assets/documents/patient-questionnaire.pdf" target="_blank" rel="noopener noreferrer">Cuestionario de Pacientes · PDF</a> | Instrumentos aplicados durante la obtención. |
+| Obtención | <a href="assets/documents/project-lead-interview.pdf" target="_blank" rel="noopener noreferrer">Entrevista al Líder del Proyecto · PDF</a>, <a href="assets/documents/patient-questionnaire.pdf" target="_blank" rel="noopener noreferrer">Cuestionario de Pacientes · PDF</a> y <a href="assets/documents/patient-survey-summary.csv" download>resumen agregado de respuestas · CSV</a> | Instrumentos de obtención y recuentos agregados de las siete respuestas; no se publican registros individuales. |
 | Escenarios | <a href="assets/documents/scenarios-storyboards.docx" download>Escenarios y Storyboards · DOCX</a> | Descripción narrativa de recorridos de usuario. |
 | Evidencia | Contexto, entrevista, encuesta, respuestas, storyboards y diagramas | Apoyan la explicación de obtención, frontera y modelos. |
 | Guía metodológica | Presentaciones y lecturas del profesor | Organizan conceptos y fases; no son origen de las cifras del caso. |
@@ -20,7 +20,7 @@ Las páginas sintetizan los documentos académicos y conservan sus referencias. 
 
 Los archivos **PDF** pueden abrirse en el navegador; los **DOCX y CSV** se ofrecen para descarga. Las respuestas individuales del cuestionario no se publican: se presentan solo agregados.
 
-Las copias CSV alimentan el [panel de resultados](/data/dashboard), el [explorador de requisitos](/data/requirements) y el [explorador de cambios](/data/changes). Los valores de historias y Story Points se toman del anexo de planificación, no del recuento de filas del registro.
+Las copias CSV alimentan el [panel de resultados](/data/dashboard), el [explorador de requisitos](/data/requirements), el [explorador de cambios](/data/changes) y la visualización de respuestas en [obtención](/process/elicitation). El resumen de pacientes contiene solo recuentos agregados; las respuestas abiertas y los datos identificables permanecen fuera del sitio. Los valores de historias y Story Points se toman del anexo de planificación, no del recuento de filas del registro.
 
 ## Corte documental y método de lectura
 

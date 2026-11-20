@@ -4,11 +4,13 @@
   const base = new URL('assets/documents/', document.baseURI);
   const files = {
     requirements: new URL('requirements-register.csv', base),
-    changes: new URL('requirements-change-log.csv', base)
+    changes: new URL('requirements-change-log.csv', base),
+    survey: new URL('patient-survey-summary.csv', base)
   };
   const expected = {
     requirements: ['id', 'nombre', 'descripcion', 'clasificacion', 'version', 'fecha', 'fuente', 'responsable', 'estabilidad', 'prioridad', 'estado', 'release', 'trazabilidad'],
-    changes: ['id_cambio', 'fecha', 'requisito_origen', 'tipo_cambio', 'requisito_destino', 'descripcion_motivo', 'version_origen', 'version_destino']
+    changes: ['id_cambio', 'fecha', 'requisito_origen', 'tipo_cambio', 'requisito_destino', 'descripcion_motivo', 'version_origen', 'version_destino'],
+    survey: ['grupo', 'opcion', 'conteo', 'participantes', 'tipo_respuesta']
   };
   const cache = {};
 
@@ -339,6 +341,94 @@
     } catch (error) { errorMessage(root, error); }
   }
 
+  async function mountEvolutionChanges(root) {
+    try {
+      const rows = await load('changes');
+      if (!root.isConnected) return;
+      clear(root);
+
+      const sorted = rows.slice().sort((a, b) => a.fecha.localeCompare(b.fecha) || a.id_cambio.localeCompare(b.id_cambio, 'es', { numeric: true }));
+      const typeCounts = countBy(sorted, 'tipo_cambio');
+      const leading = typeCounts[0];
+      const summary = element('div', 'data-evolution-summary');
+      summary.append(chart(
+        'Eventos de cambio por tipo', typeCounts, sorted.length,
+        'El porcentaje compara cada tipo con el total de eventos registrados.',
+        'El tipo más frecuente es «' + leading[0] + '»: ' + leading[1] + ' de ' + sorted.length + ' eventos.'
+      ));
+      root.append(summary, element('h3', 'data-evolution-heading', 'Línea de tiempo de decisiones'));
+
+      const grouped = new Map();
+      sorted.forEach(row => {
+        if (!grouped.has(row.fecha)) grouped.set(row.fecha, []);
+        grouped.get(row.fecha).push(row);
+      });
+      const timeline = element('div', 'data-change-timeline');
+      grouped.forEach((events, date) => {
+        const period = element('section', 'data-change-period');
+        period.append(element('h4', '', formatDate(date)));
+        const list = element('div', 'data-change-event-list');
+        events.forEach(row => {
+          const details = element('details', 'data-change-event');
+          const summaryNode = element('summary', 'data-change-event-summary');
+          summaryNode.append(
+            element('strong', 'data-change-id', row.id_cambio),
+            element('span', 'data-change-type', row.tipo_cambio)
+          );
+          details.append(summaryNode);
+
+          const fields = element('dl', 'data-change-fields');
+          [
+            ['Requisitos de origen', row.requisito_origen || 'No aplica; evento de creación'],
+            ['Requisitos de destino', row.requisito_destino || 'No especificado en el registro'],
+            ['Motivo registrado', row.descripcion_motivo || 'Sin motivo consignado'],
+            ['Versiones', (row.version_origen || '—') + ' → ' + (row.version_destino || '—')]
+          ].forEach(([label, value]) => {
+            fields.append(element('dt', '', label), element('dd', '', value));
+          });
+          details.append(fields);
+          list.append(details);
+        });
+        period.append(list);
+        timeline.append(period);
+      });
+      root.append(timeline);
+      sourceNote(root, 'Fuente: Historial de Cambios. Cada fila es un evento y puede afectar varios requisitos.', files.changes, 'Descargar CSV');
+    } catch (error) { errorMessage(root, error); }
+  }
+
+  async function mountPatientSurvey(root) {
+    try {
+      const rows = await load('survey');
+      if (!root.isConnected) return;
+      clear(root);
+
+      const functionalityRows = rows.filter(row => row.grupo === 'funcionalidades');
+      const concern = rows.find(row => row.grupo === 'preocupacion');
+      if (!functionalityRows.length || !concern) throw new Error('El resumen agregado no contiene las categorías esperadas.');
+      const participants = Number(concern.participantes);
+      const entries = functionalityRows
+        .map(row => [row.opcion, Number(row.conteo)])
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'));
+      const maxCount = entries[0][1];
+      const mostSelected = entries.filter(([, value]) => value === maxCount).map(([label]) => label);
+      const topLabel = mostSelected.length > 1 ? mostSelected.slice(0, -1).join(', ') + ' y ' + mostSelected[mostSelected.length - 1] : mostSelected[0];
+      const featureChart = chart(
+        'Funciones que los pacientes consideran importantes', entries, participants,
+        'Cada barra muestra cuántas de las ' + participants + ' personas eligieron esa opción.',
+        'Las más elegidas fueron ' + topLabel + ' (' + maxCount + ' de ' + participants + '). Se permitían varias selecciones, así que los porcentajes no suman 100%.'
+      );
+      const summary = element('div', 'data-survey-grid');
+      summary.append(featureChart, metric(
+        'Preocupación compartida', concern.conteo + '/' + concern.participantes,
+        'Las respuestas señalaron la calidad del diagnóstico sin examen físico.'
+      ));
+      root.append(summary);
+      root.append(element('p', 'data-survey-method', 'La gráfica resume opciones cerradas y de selección múltiple. Las respuestas abiertas no se convierten aquí en categorías: requieren análisis cualitativo para agrupar temas sin atribuirlos a personas.'));
+      sourceNote(root, 'Fuente: resumen agregado de las siete respuestas; no contiene datos individuales.', files.survey, 'Descargar resumen CSV');
+    } catch (error) { errorMessage(root, error); }
+  }
+
   async function mountRequirements(root) {
     try {
       const rows = await load('requirements');
@@ -448,12 +538,16 @@
       const specification = document.getElementById('hvu-specification-chart');
       const prioritization = document.getElementById('hvu-prioritization-chart');
       const management = document.getElementById('hvu-management-chart');
+      const evolutionChanges = document.getElementById('hvu-evolution-changes');
+      const patientSurvey = document.getElementById('hvu-patient-survey');
       const requirements = document.getElementById('hvu-requirements');
       const changes = document.getElementById('hvu-changes');
       if (dashboard) mountDashboard(dashboard);
       if (specification) mountSpecificationChart(specification);
       if (prioritization) mountPrioritizationChart(prioritization);
       if (management) mountManagementChart(management);
+      if (evolutionChanges) mountEvolutionChanges(evolutionChanges);
+      if (patientSurvey) mountPatientSurvey(patientSurvey);
       if (requirements) mountRequirements(requirements);
       if (changes) mountChanges(changes);
     });

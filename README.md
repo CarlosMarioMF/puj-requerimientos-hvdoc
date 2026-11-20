@@ -19,7 +19,7 @@ Los artefactos académicos originales **no se modificarán**. El sitio tendrá s
 | Documento rector | [Documento Ágil del Hospital Virtual](docs/assets/documents/agile-project-document.docx) | Orden, relato y conclusiones del proyecto. |
 | Especificación | [Especificación de Requisitos](docs/assets/documents/requirements-specification.docx) | Redacción completa, atributos y trazabilidad de los requisitos. |
 | Planificación | [Historias de Usuario y Product Backlog](docs/assets/documents/user-stories-product-backlog.docx) | Historias, criterios de aceptación, estimaciones y entregas. |
-| Datos estructurados | [Registro Maestro de Requisitos](docs/assets/documents/requirements-register.csv) e [Historial de Cambios](docs/assets/documents/requirements-change-log.csv) | Filtros, tablas, recuentos y evolución de cambios. |
+| Datos estructurados | [Registro Maestro de Requisitos](docs/assets/documents/requirements-register.csv), [Historial de Cambios](docs/assets/documents/requirements-change-log.csv) y [resumen agregado de respuestas de pacientes](docs/assets/documents/patient-survey-summary.csv) | Consultas sobre requisitos y cambios; recuentos agregados de funcionalidades y preocupaciones del cuestionario. |
 | Evidencia del proceso | Contexto, entrevista, encuesta, respuestas, storyboards y diagramas | Ejemplos y soporte de las fases. |
 | Guía didáctica | Diapositivas y lecturas del profesor | Secuencia y conceptos de ingeniería de requisitos. |
 
@@ -110,7 +110,7 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 
 **Estado: completada.** La presentación, continuidad y accesibilidad se revisaron en la Fase 4.
 
-1. Usar las copias publicables del Registro Maestro de Requisitos y del Historial de Cambios en `docs/assets/documents/`, conservando los originales.
+1. Usar las copias publicables del Registro Maestro, el Historial de Cambios y el resumen agregado de respuestas en `docs/assets/documents/`, conservando los originales y sin publicar respuestas individuales.
 2. Leer el registro maestro en el navegador y ofrecer búsqueda por ID/nombre/texto y filtros por familia, prioridad, entrega, estado y estabilidad.
 3. Leer el historial y ofrecer búsqueda por requisito y filtro por tipo de cambio.
 4. Crear un panel con indicadores y gráficos de clasificación, prioridad, entregas, estabilidad, estados y tipos de cambio. Añadir referencias cruzadas al contenido explicativo.
@@ -118,7 +118,7 @@ La versión 5.0.0 de `docsify-cli` reporta cuatro avisos de seguridad de severid
 6. Hacer que las vistas sean legibles en proyector y móvil, utilizables con teclado y comprensibles también mediante tablas o etiquetas de texto.
 7. Indicar fecha/versión de la fuente y significado de cada indicador. Evitar publicar información personal de respuestas individuales.
 
-**Implementación actual:** [panel de resultados](docs/data/dashboard.md), [explorador de requisitos](docs/data/requirements.md) y [explorador de cambios](docs/data/changes.md). Las barras y los filtros se construyen en el navegador a partir de las copias CSV. La distribución de historias y puntos se presenta aparte, con el Product Backlog como fuente.
+**Implementación actual:** [panel de resultados](docs/data/dashboard.md), [explorador de requisitos](docs/data/requirements.md), [explorador de cambios](docs/data/changes.md) y visualización de pacientes en [obtención](docs/process/elicitation.md). Las barras y los filtros se construyen en el navegador a partir de las copias CSV. La distribución de historias y puntos se presenta aparte, con el Product Backlog como fuente.
 
 **Resultado esperado:** navegación y visualizaciones interactivas vinculadas a las fuentes correctas.
 

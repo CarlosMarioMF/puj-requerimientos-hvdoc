@@ -20,7 +20,11 @@ La distribución cuantitativa de las **40 historias** y los **354 puntos** se co
 
 El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> distingue entre **historias vigentes** e **identificadores históricos**. No hay historias eliminadas dentro del backlog consolidado de 40 elementos. HU-03, HU-05 y HU-33 fueron referencias iniciales que se refinaron en historias independientes con sufijos; no se cuentan además de las 40.
 
-El <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> registra 15 eventos relacionados con consolidación, reclasificación, separación, retiro y creación de requisitos. Entre los ejemplos explicados en el <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> figuran la consolidación de requisitos de citas y pagos, la transformación de requisitos de disponibilidad, y la incorporación de las condiciones de presupuesto y horizonte temporal tras validación.
+El <a href="assets/documents/requirements-change-log.csv" download>Historial de Cambios</a> registra **15 eventos** de consolidación, reclasificación, separación, retiro y creación. Cada evento conserva fecha, requisitos de origen y destino, motivo y versiones para seguir cómo evolucionó la línea base.
+
+<div id="hvu-evolution-changes" class="data-view data-evolution-view"><p>Cargando evolución de cambios…</p></div>
+
+La vista muestra eventos registrados, no requisitos vigentes: una decisión puede afectar a varios requisitos. El <a href="assets/documents/agile-project-document.docx" download>Documento Ágil</a> amplía ejemplos como la consolidación de requisitos de citas y pagos, y la incorporación de condiciones de presupuesto y plazo después de la validación.
 
 ## Línea base y versiones documentales
 
